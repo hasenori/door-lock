@@ -12,7 +12,7 @@ import sys
 SERVO_PIN  =  18 # サーボモータに接続したGPIO端子番号を指定
 
 # サーボモータを動かす角度を指定する
-DOOR_UNLOCK = 30 # 解錠：90°の時
+DOOR_UNLOCK = 26 # 解錠：90°の時
 DOOR_LOCK= 78    # 施錠：0°の時(初期値は施錠)
 
 #PWMの設定
@@ -41,6 +41,6 @@ else:
     #エラー時にサーボをOFFする
     wp.pwmWrite(SERVO_PIN,0) # 0°の位置に移動
 
-time.sleep(2.0) #sleep(秒指定)
+time.sleep(5.0) #sleep(秒指定)
 print("OFFSET")
 wp.pwmWrite(SERVO_PIN, 0) # 0°の位置に移動
